@@ -1,0 +1,187 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./assets/fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
+}
+
+
+:root {
+  --black: #121212;
+  --dark-blue: #19202d;
+  --white: #fff;
+
+  --grey-100: #e7eaee;
+  --grey-200: #cfcfcf;
+  --grey-400: #676d7e;
+  --grey-500: #48556a;
+
+  --purple-50: #ede4ff;
+  --purple-300: #a775f1;
+  --purple-500: #733fc8;
+
+  --space-50: .25rem;
+  --space-100: .5rem;
+  --space-200: 1rem;
+  --space-300: 1.5rem;
+  --space-400: 2rem;
+  --space-500: 2.5rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--grey-100);
+  /* padding: 4rem 2rem; */
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials {
+  max-width: 1200px;
+  display: grid;
+  gap: var(--space-400);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "testimonial-1"
+    "testimonial-2"
+    "testimonial-3"
+    "testimonial-4"
+    "testimonial-5";
+}
+@media(min-width: 768px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "testimonial-1 testimonial-1"
+      "testimonial-2 testimonial-3"
+      "testimonial-4 testimonial-4"
+      "testimonial-5 testimonial-5";
+  }
+}
+@media(min-width: 1200px) {
+  .testimonials {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "testimonial-1 testimonial-1 testimonial-2 testimonial-5"
+      "testimonial-3 testimonial-4 testimonial-4 testimonial-5";
+  }
+}
+
+.testimonial {
+  background-color: var(--white);
+  padding: var(--space-400);
+  border-radius: .5rem;
+  box-shadow: 1rem 2rem 1rem rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.testimonial-1 {
+  grid-area: testimonial-1;
+  background-color: var(--purple-500);
+}
+.testimonial-1::before {
+  content: "“";
+  position: absolute;
+  right: 6rem;
+  top: -3rem;
+  color: var(--purple-300);
+  font-size: 24rem;
+  font-family: arial, sans-serif;
+  font-weight: 400;
+}
+.testimonial-2 {
+  grid-area: testimonial-2;
+  background-color: var(--grey-500);
+}
+.testimonial-3 {
+  grid-area: testimonial-3;
+}
+.testimonial-4 {
+  grid-area: testimonial-4;
+  background-color: var(--dark-blue);
+}
+.testimonial-5 {
+  grid-area: testimonial-5;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-200);
+}
+
+.author-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+.author-name {
+  color: var(--grey-500);
+  font-family: 'Barlow Semi Condensed', arial, sans-serif;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: var(--space-50);
+}
+.testimonial-1 .author-name { color: var(--white); }
+.testimonial-2 .author-name { color: var(--white); }
+.testimonial-4 .author-name { color: var(--white); }
+
+.author-title {
+  color: var(--grey-400);
+  font-family: 'Barlow Semi Condensed', arial, sans-serif;
+  font-size: .6875rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.testimonial-1 .author-title { color: var(--purple-50); }
+.testimonial-2 .author-title { color: var(--grey-100); }
+.testimonial-4 .author-title { color: var(--white); }
+
+.testimonial-lead {
+  color: var(--grey-500);
+  font-family: 'Barlow Semi Condensed', arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  position: relative;
+}
+.testimonial-1 .testimonial-lead { color: var(--white); }
+.testimonial-2 .testimonial-lead { color: var(--white); }
+.testimonial-4 .testimonial-lead { color: var(--grey-200); }
+
+.testimonial-body {
+  color: var(--grey-400);
+  font-family: 'Barlow Semi Condensed', arial, sans-serif;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.testimonial-1 .testimonial-body { color: var(--purple-50); }
+.testimonial-2 .testimonial-body { color: var(--grey-100); }
+.testimonial-4 .testimonial-body { color: var(--grey-100); }
