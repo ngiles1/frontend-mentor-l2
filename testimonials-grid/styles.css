@@ -102,7 +102,7 @@ body {
   grid-area: testimonial-1;
   background-color: var(--purple-500);
 }
-@media(min-width: 768px) {
+@media(min-width: 576px) {
   .testimonial-1::before {
     content: "“";
     position: absolute;
