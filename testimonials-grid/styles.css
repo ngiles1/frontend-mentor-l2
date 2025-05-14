@@ -102,15 +102,17 @@ body {
   grid-area: testimonial-1;
   background-color: var(--purple-500);
 }
-.testimonial-1::before {
-  content: "“";
-  position: absolute;
-  right: 6rem;
-  top: -3rem;
-  color: var(--purple-300);
-  font-size: 24rem;
-  font-family: arial, sans-serif;
-  font-weight: 400;
+@media(min-width: 768px) {
+  .testimonial-1::before {
+    content: "“";
+    position: absolute;
+    right: 6rem;
+    top: -3rem;
+    color: var(--purple-300);
+    font-size: 24rem;
+    font-family: arial, sans-serif;
+    font-weight: 400;
+  }
 }
 .testimonial-2 {
   grid-area: testimonial-2;
@@ -147,6 +149,7 @@ body {
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: var(--space-50);
+  position: relative;
 }
 .testimonial-1 .author-name { color: var(--white); }
 .testimonial-2 .author-name { color: var(--white); }
@@ -158,6 +161,7 @@ body {
   font-size: .6875rem;
   font-weight: 500;
   line-height: 1.1;
+  position: relative;
 }
 .testimonial-1 .author-title { color: var(--purple-50); }
 .testimonial-2 .author-title { color: var(--grey-100); }
@@ -181,6 +185,7 @@ body {
   font-size: .8125rem;
   font-weight: 500;
   line-height: 1.4;
+  position: relative;
 }
 .testimonial-1 .testimonial-body { color: var(--purple-50); }
 .testimonial-2 .testimonial-body { color: var(--grey-100); }
